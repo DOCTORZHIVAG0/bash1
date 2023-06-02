@@ -1,0 +1,60 @@
+
+1.Определить имя папки, в которой вы находитесь
+$ pwd
+
+2.Создать папку с именем test1
+$ mkdir test1
+
+3.Перейти в папку test1
+$ cd test1
+
+4.Создать файл 1,2 и 3 внутри каталога test1
+$ touch file1 file2 file3
+
+5.Проверить содержимое каталога test1
+$ ls -la
+
+6.Создать папку test2 внутри домашней директории
+$ cd ~
+$ mkdir test2
+
+7.Удалить папку test2
+$ rmdir test2
+
+8.Удалить файл 2
+$ cd DZ/test1
+$ rm file2
+
+9.Создать папку test3 и добавить в нее два файла
+$ mkdir test3
+$ cd test3
+$ touch file1 file2 
+
+10.Удалить папку test3
+$ cd ..
+$ rm -rf test3
+
+11.Создать папку test4
+$ mkdir test4
+
+12.Переместить файлы 1 и 3 в папку test4
+$ mv test1/file1.txt test4
+$ mv test1/file3.txt test4
+
+13.Добавить в файл 1 три строки со словами line
+$ echo -e "line\n line\n line\n" >> file1.txt
+
+14.Посмотреть содержимое файла 1
+$ cat file1.txt
+
+15.Добавьте в файл 3 три строки со словами line
+$ echo -e "line\n line\n line\n" >> file3.txt
+
+16.Просмотрите содержимое двух файлов (1 и 3) сразу
+$ cat file1.txt file3.txt
+
+17.Используя один из редакторов замените все строки
+$ nano file1.txt file3.txt
+^\ Replace --> line ---> LINE_NEW --> A (ALL)  --> ^X  ---> Y (save) ---> file3.txt the same
+
+   

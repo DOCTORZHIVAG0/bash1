@@ -1,0 +1,80 @@
+
+1.Создать папку test 3
+$ mkdir test3
+
+2.Добавить в него три файла 4, 5 и 6, в каждом из которых должно быть по 4 строки row1, row2, row3, row4
+$ cd test3
+$ touch file4.txt file5.txt file6.txt
+$ echo -e "row1\n row2\n row3\n row4\n" >> file4.txt
+$ echo -e "row1\n row2\n row3\n row4\n" >> file5.txt
+$ echo -e "row1\n row2\n row3\n row4\n" >> file6.txt
+
+3.Найдите строку row2 в файле 5
+$ grep -i "row2" file5.txt
+
+4.Найдите строку row в папке test3
+$ grep -Ri "row" .
+
+5.Посчитайте сколько строк с содержимым row в файле 6
+$ grep -c 'row' file6.txt
+
+6.Найдите файл 5 внутри папки test3
+$ find . -name "file5.txt"
+
+7.Используя команду find, удалите файл 5
+$ find -name "file5.txt" -delete
+
+8.Используя команду echo, добавьте слово test в файл 4
+$ echo test > file4.txt
+
+9.Замените слово test в файле 4 на fail
+$ grep 'test' -P -R -I -l * | xargs sed -i 's/test/fail/g'
+
+10.Добавьте в файл 4 слово test так, чтобы сохранилось содержимое
+$ echo test >> file4.txt
+
+11.Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе
+$ top
+
+12.Убейте процесс 666 в консоли
+$ sudo kill 8(PID)
+
+13.Узнайте доступность ресурса artsiomrusau.com, используя ping
+$ ping artsiomrusau.com
+
+14.Отправьте 5 пакетов на сайт artsiomrusau.com
+$ ping -c 5 artsiomrusau.com
+
+15.Используя GET и команду curl, получите информацию о зарегистрированных питомцах на https://petstore.swagger.io/
+$ curl https://petstore.swagger.io/v2/pet
+{
+"id"=0,
+"category"=
+{
+"id"=0,
+"name"="string"
+},
+"name"="doggie",
+"photoUrls"=["string"],
+"tags"=[
+{
+ "id"=0,
+"name"="string"
+}
+],
+"status"="available"
+}
+
+16.Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/
+$ curl -X POST https://petstore.swagger.io/v2/user 
+{
+--data "id=0" 
+--data "username=string" 
+--data "firstName=string" 
+--data "lastName=string" 
+--data "email=string" 
+--data "password=string" 
+--data "phone=string" 
+--data "userStatus=0"
+}
+   
